@@ -27,92 +27,96 @@ class DrawerWidget extends StatelessWidget {
           ),
           Padding(
             padding:EdgeInsets.only(
-              
               top: 100,
             ),
             child: Column(
               mainAxisAlignment:MainAxisAlignment.center,
               children: [
-                Card(
-                  elevation: 1,
-                  child:InkWell(
-                    onTap: (){
+                InkWell(
+                  onTap: (){
 
-                    },
-                    child: ListTile(
-                      leading: Icon(Icons.home),
-                      title: Text(
-                        'Home'
+                  },
+                  child: ListTile(
+                    leading: Icon(Icons.home,color: Colors.blue[400],),
+                    title: Text(
+                      'Home',
+                      style: TextStyle(
+                        color:Colors.orange,
                       ),
                     ),
                   ),
                 ),
+                SizedBox(height: 10,),
+                InkWell(
+                  onTap: (){
 
-                Card(
-                  elevation: 1,
-                  child: InkWell(
-                    onTap: (){
-
-                    },
-                    child: ListTile(
-                      leading: Icon(Icons.money),
-                      title: Text(
-                        'Income'
+                  },
+                  child: ListTile(
+                    leading: Icon(Icons.money,color: Colors.blue[400],),
+                    title: Text(
+                      'Income',
+                      style: TextStyle(
+                        color:Colors.orange,
                       ),
                     ),
                   ),
                 ),
-                Card(
-                  child: InkWell(
-                    onTap: (){
+                SizedBox(height: 10,),
+                InkWell(
+                  onTap: (){
 
-                    },
-                    child: ListTile(
-                      leading: Icon(Icons.money_off),
-                      title: Text(
-                        'Expense'
+                  },
+                  child: ListTile(
+                    leading: Icon(Icons.money_off,color: Colors.blue[400],),
+                    title: Text(
+                      'Expense',
+                      style: TextStyle(
+                        color:Colors.orange,
                       ),
                     ),
                   ),
                 ),
-                Card(
-                  elevation: 1,
-                  child: InkWell(
-                    onTap: (){
+                SizedBox(height: 10,),
+                InkWell(
+                  onTap: (){
 
-                    },
-                    child: ListTile(
-                      leading: Icon(Icons.person),
-                      title: Text(
-                        'Profile'
+                  },
+                  child: ListTile(
+                    leading: Icon(Icons.person,color: Colors.blue[400],),
+                    title: Text(
+                      'Profile',
+                      style: TextStyle(
+                        color:Colors.orange,
                       ),
                     ),
                   ),
                 ),
-                Card(
-                  elevation: 1,
-                  child: InkWell(
-                    onTap: (){
+                SizedBox(height: 10,),
+                InkWell(
+                  onTap: (){
 
-                    },
-                    child: ListTile(
-                      leading: Icon(Icons.face),
-                      title: Text(
-                        'Customers'
+                  },
+                  child: ListTile(
+                    leading: Icon(Icons.face,color: Colors.blue[400]),
+                    title: Text(
+                      'Customers',
+                      style: TextStyle(
+                        color:Colors.orange,
                       ),
                     ),
                   ),
                 ),
-                Card(
-                  elevation: 1,
-                  child: InkWell(
-                    onTap: (){
+                SizedBox(height: 10,),
+                InkWell(
+                  onTap: (){
 
-                    },
-                    child: ListTile(
-                      leading: Icon(Icons.store),
-                      title: Text(
-                        'Stock'
+                  },
+                  child: ListTile(
+                    leading: Icon(Icons.store,color: Colors.blue[400],),
+                    title: Text(
+                      'Stock',
+                      style: TextStyle(
+                        color:Colors.orange,
                       ),
                     ),
                   ),

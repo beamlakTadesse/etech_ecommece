@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce/screens/vendors/AppbarWidget.dart';
 import 'package:flutter_ecommerce/screens/vendors/DrawerWidget.dart';
+import 'package:flutter_ecommerce/screens/vendors/HomeScreen.dart';
+// import 'package:flutter_ecommerce/screens/vendors/HomeScreen.dart';
 
 class HomePage extends StatefulWidget {
   
@@ -17,22 +19,25 @@ class _HomePageState extends State<HomePage> {
       });
     }
     static const TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-    static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
+    static  List<Widget> _widgetOptions = <Widget>[
+    HomeScreen(),
+    Center(
+      child: Text(
+        'Index 1: Sell',
+        style: optionStyle,
+      ),
     ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
+    Center(
+      child: Text(
+        'Index 2: Product',
+        style: optionStyle,
+      ),
     ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: School',
-      style: optionStyle,
+    Center(
+      child: Text(
+        'Index 3: More',
+        style: optionStyle,
+      ),
     ),
   ];
   
@@ -44,8 +49,11 @@ class _HomePageState extends State<HomePage> {
         child: AppbarWidget(),
       ),
       drawer:DrawerWidget(),
-      body: Center(
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        height:MediaQuery.of(context).size.height,
         child: _widgetOptions.elementAt(_selectedIndex),
+
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
@@ -57,7 +65,6 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home,color: Colors.orangeAccent,),
             label: 'Home',
-            backgroundColor: Colors.blueAccent
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.sell,color: Colors.orangeAccent,),
@@ -68,8 +75,8 @@ class _HomePageState extends State<HomePage> {
             label: 'Products',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home,color: Colors.orangeAccent,),
-            label: 'Home',
+            icon: Icon(Icons.more_horiz,color: Colors.orangeAccent,),
+            label: 'more',
           ),
         ],
       ),
