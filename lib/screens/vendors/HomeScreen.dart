@@ -50,11 +50,20 @@ class HomeCard extends StatelessWidget {
             child: Column(
               children: [
                 Row(
-                  // crossAxisAlignment: CrossAxisAlignment.stretch,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.storage,
-                      color: Colors.black45,
+                    Container(
+                      width: 40,
+                      height: 40,
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(50),
+                        onTap: (){
+
+                        },
+                        child: Icon(Icons.storage,
+                          color: Colors.black45,
+                        ),
+                      ),
                     ),
                     Column(
                       children: [
@@ -72,8 +81,16 @@ class HomeCard extends StatelessWidget {
                         )
                       ],
                     ),
-                    Icon(Icons.arrow_forward_ios,
-                    color: Colors.black45,
+                    Container(
+                      width: 40,
+                      height: 40,
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(50),
+                        onTap: (){},
+                        child: Icon(Icons.arrow_forward_ios,
+                        color: Colors.black45,
+                        ),
+                      ),
                     ),
                   ],
                 ),
