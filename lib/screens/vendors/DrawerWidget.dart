@@ -9,7 +9,6 @@ class DrawerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Column(
-        
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 40),
@@ -37,7 +36,7 @@ class DrawerWidget extends StatelessWidget {
 
                   },
                   child: ListTile(
-                    leading: Icon(Icons.home,color: Colors.blue[400],),
+                    leading: Icon(Icons.home,color: Colors.blue,),
                     title: Text(
                       'Home',
                       style: TextStyle(
@@ -52,7 +51,7 @@ class DrawerWidget extends StatelessWidget {
 
                   },
                   child: ListTile(
-                    leading: Icon(Icons.money,color: Colors.blue[400],),
+                    leading: Icon(Icons.money,color: Colors.blue,),
                     title: Text(
                       'Income',
                       style: TextStyle(
@@ -67,7 +66,7 @@ class DrawerWidget extends StatelessWidget {
 
                   },
                   child: ListTile(
-                    leading: Icon(Icons.money_off,color: Colors.blue[400],),
+                    leading: Icon(Icons.money_off,color: Colors.blue,),
                     title: Text(
                       'Expense',
                       style: TextStyle(
@@ -82,7 +81,7 @@ class DrawerWidget extends StatelessWidget {
 
                   },
                   child: ListTile(
-                    leading: Icon(Icons.person,color: Colors.blue[400],),
+                    leading: Icon(Icons.person,color: Colors.blue,),
                     title: Text(
                       'Profile',
                       style: TextStyle(
@@ -97,7 +96,7 @@ class DrawerWidget extends StatelessWidget {
 
                   },
                   child: ListTile(
-                    leading: Icon(Icons.face,color: Colors.blue[400]),
+                    leading: Icon(Icons.face,color: Colors.blue),
                     title: Text(
                       'Customers',
                       style: TextStyle(
@@ -112,7 +111,7 @@ class DrawerWidget extends StatelessWidget {
 
                   },
                   child: ListTile(
-                    leading: Icon(Icons.store,color: Colors.blue[400],),
+                    leading: Icon(Icons.store,color: Colors.blue,),
                     title: Text(
                       'Stock',
                       style: TextStyle(

@@ -1,7 +1,9 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce/screens/vendors/AppbarWidget.dart';
 import 'package:flutter_ecommerce/screens/vendors/DrawerWidget.dart';
 import 'package:flutter_ecommerce/screens/vendors/HomeScreen.dart';
+import 'package:flutter/material.dart';
 // import 'package:flutter_ecommerce/screens/vendors/HomeScreen.dart';
 
 class HomePage extends StatefulWidget {
@@ -40,10 +42,11 @@ class _HomePageState extends State<HomePage> {
       ),
     ),
   ];
-  
+  GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Colors.blueAccent,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),
         child: AppbarWidget(),
@@ -55,31 +58,44 @@ class _HomePageState extends State<HomePage> {
         child: _widgetOptions.elementAt(_selectedIndex),
 
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        onTap: _onItemTapped,
-        elevation: 5,
-        backgroundColor: Colors.black,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home,color: Colors.orangeAccent,),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.sell,color: Colors.orangeAccent,),
-            label: 'Sell',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.event_note,color: Colors.orangeAccent,),
-            label: 'Products',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.more_horiz,color: Colors.orangeAccent,),
-            label: 'more',
-          ),
-        ],
-      ),
+      bottomNavigationBar: CurvedNavigationBar(
+          key: _bottomNavigationKey,
+          backgroundColor: Colors.white,
+          height: 45,
+          color: Colors.blueAccent,
+          items: <Widget>[
+            Icon(Icons.home, size: 30,color: Colors.orangeAccent,),
+            Icon(Icons.sell, size: 30,color: Colors.orangeAccent),
+            Icon(Icons.production_quantity_limits, size: 30,color: Colors.orangeAccent),
+          ],
+          onTap: _onItemTapped,
+        ),
+      // BottomNavigationBar(
+      //   currentIndex: _selectedIndex,
+      //   selectedItemColor: Colors.amber[800],
+      //   onTap: _onItemTapped,
+      //   elevation: 5,
+      //   backgroundColor: Colors.black,
+      //   items: [
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.home,color: Colors.orangeAccent,),
+      //       label: 'Home',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.sell,color: Colors.orangeAccent,),
+      //       label: 'Sell',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.production_quantity_limits,color: Colors.orangeAccent,),
+      //       label: 'Products',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.more_horiz,color: Colors.orangeAccent,),
+      //       label: 'more',
+      //     ),
+
+      //   ],
+      // ),
     );
   }
 }

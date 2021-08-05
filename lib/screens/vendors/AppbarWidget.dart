@@ -15,7 +15,6 @@ class AppbarWidget extends StatelessWidget {
         InkWell(
           borderRadius: BorderRadius.circular(50),
           onTap: (){
-
           },
           child: Padding(
             padding: const EdgeInsets.all(20),
